@@ -19,6 +19,7 @@ import {
   Shield,
   Users,
 } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const page = () => {
   const year = new Date().getFullYear();
@@ -98,7 +99,7 @@ const page = () => {
             whileInView="visible"
             viewport={{ once: true, amount: 0.2 }}
             variants={staggerContainer}
-            className="grid md:grid-cols-2 gap-8 md:gap-12 items-center mb-20"
+            className="grid md:grid-cols-2 gap-8 md:gap-12 items-center mb-20 md:mb-30"
           >
             <motion.div variants={scaleIn} className="order-2 md:order-1">
               <div className="relative h-[400px] rounded-2xl overflow-hidden shadow-2xl dark:shadow-gray-900/50">
@@ -167,6 +168,11 @@ const page = () => {
                     </div>
                   </div>
                 </div>
+                <div className="flex justify-center md:justify-start">
+                  <a href="https://www.goldminesystems.com/">
+                    <Button className="cursor-pointer">Read More</Button>
+                  </a>
+                </div>
               </Card>
             </motion.div>
           </motion.div>
@@ -177,7 +183,7 @@ const page = () => {
             whileInView="visible"
             viewport={{ once: true, amount: 0.2 }}
             variants={staggerContainer}
-            className="grid md:grid-cols-2 gap-8 md:gap-12 items-center mb-20"
+            className="grid md:grid-cols-2 gap-8 md:gap-12 items-center mb-20 md:mb-30"
           >
             <motion.div variants={fadeInUp} className="order-1">
               <Card className="p-8 shadow-lg border-0 bg-white/80 dark:bg-gray-800/80 backdrop-blur transition-colors duration-300">
@@ -226,6 +232,11 @@ const page = () => {
                       </p>
                     </div>
                   </div>
+                </div>
+                <div className="flex justify-center md:justify-start">
+                  <a href="https://www.goldminesystems.com/">
+                    <Button className="cursor-pointer">Read More</Button>
+                  </a>
                 </div>
               </Card>
             </motion.div>
@@ -318,6 +329,11 @@ const page = () => {
                     computer and network solutions and services.
                   </p>
                 </div>
+                <div className="flex justify-center md:justify-start">
+                  <a href="https://www.goldminesystems.com/">
+                    <Button className="cursor-pointer">Read More</Button>
+                  </a>
+                </div>
               </Card>
             </motion.div>
           </motion.div>
@@ -351,7 +367,6 @@ const page = () => {
           </div>
         </div>
       </div>
-      
     </div>
   );
 };
