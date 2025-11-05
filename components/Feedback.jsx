@@ -52,7 +52,7 @@ export default function Feedback() {
   return (
     <section
       ref={sectionRef}
-      className="relative bg-white dark:bg-neutral-950 overflow-hidden py-16"
+      className="relative bg-white dark:bg-neutral-950 overflow-hidden pb-8 md:pb-14"
       aria-labelledby="stats-title"
     >
       <div className="max-w-6xl mx-auto px-6 md:px-10">

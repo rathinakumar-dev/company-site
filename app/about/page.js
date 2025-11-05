@@ -122,7 +122,7 @@ const page = () => {
         </BreadcrumbList>
       </Breadcrumb>
       <main>
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8  ">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <motion.section
             {...fadeInUp}
             className="bg-white dark:bg-zinc-900 rounded-2xl md:rounded-3xl p-6 sm:p-8 md:p-10 lg:p-12 mb-12 md:mb-16 lg:mb-20 shadow-xl"
@@ -226,7 +226,7 @@ const page = () => {
                           {milestone.description}
                         </p>
                       </div>
-                    </div> 
+                    </div>
                     <div className="hidden lg:block w-6 h-6 rounded-full bg-gradient-to-br from-amber-500 to-orange-600 border-4 border-white dark:border-zinc-900 shadow-lg z-10 flex-shrink-0"></div>
                     <div className="hidden lg:block flex-1"></div>
                   </motion.div>

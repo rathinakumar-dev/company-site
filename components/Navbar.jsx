@@ -169,14 +169,16 @@ export default function Navbar() {
           </NavigationMenu>
 
           <div className="hidden md:flex items-center gap-3">
-            <AnimatedThemeToggler className="cursor-pointer" />
-            <Button className="bg-amber-400 hover:bg-amber-300 text-black px-5 rounded-full text-sm font-semibold focus-visible:ring-2 focus-visible:ring-amber-500/60 cursor-pointer">
+            <AnimatedThemeToggler className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-gray-200 bg-white text-gray-800 hover:bg-gray-50 dark:border-neutral-800 dark:bg-neutral-900 dark:text-gray-100 dark:hover:bg-neutral-800 transition-colors cursor-pointer" />
+            <a href="contact">
+              <Button className="bg-amber-400 hover:bg-amber-300 text-black px-5 rounded-full text-sm font-semibold focus-visible:ring-2 focus-visible:ring-amber-500/60 cursor-pointer">
               Contact Us
             </Button>
+            </a>
           </div>
 
           <div className="md:hidden flex items-center gap-3">
-            <AnimatedThemeToggler />
+            <AnimatedThemeToggler className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-gray-200 bg-white text-gray-800 hover:bg-gray-50 dark:border-neutral-800 dark:bg-neutral-900 dark:text-gray-100 dark:hover:bg-neutral-800 transition-colors" />
             <button
               onClick={toggleMenu}
               aria-expanded={isOpen}
@@ -283,9 +285,11 @@ export default function Navbar() {
                 </div>
 
                 <motion.div variants={linkVariants} className="mt-6">
-                  <Button className="w-full bg-amber-500 text-zinc-900 hover:bg-amber-400 px-6 rounded-lg text-sm font-semibold">
+                  <a href="contact">
+                    <Button className="w-full bg-amber-500 text-zinc-900 hover:bg-amber-400 px-6 rounded-lg text-sm font-semibold">
                     Contact Us
                   </Button>
+                  </a>
                 </motion.div>
               </div>
             </motion.nav>
