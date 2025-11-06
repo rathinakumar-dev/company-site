@@ -71,14 +71,17 @@ export default function Navbar() {
   const servicesSubmenu = useMemo(
     () => [
       "Domain Registration",
-      "Web Site Designing",
-      "Web Hosting",
+      "Web Hosting & Designing",
       "SSL Certificates",
       "VPS Hosting",
+      "E-Commerce WEbsite",
       "E-Mail Solutions",
       "Software Development",
+      "Android App Development",
       "Panoromic 360° View",
       "Bulk SMS Service",
+      "Gsuite email Creation",
+      "Payment Gatewap Intergation",
     ],
     []
   );
@@ -131,7 +134,7 @@ export default function Navbar() {
                   What We Do
                 </NavigationMenuTrigger>
                 <NavigationMenuContent className="rounded-xl border border-gray-200 dark:border-neutral-800 bg-white dark:bg-neutral-900">
-                  <ul className="grid w-[420px] gap-2 p-4 md:w-[520px] md:grid-cols-2 lg:w-[640px]">
+                  <ul className="grid w-[420px] gap-2 p-4 md:w-[520px] md:grid-cols-2  lg:w-[640px]">
                     {servicesSubmenu.map((service) => (
                       <li key={service}>
                         <NavigationMenuLink asChild>
@@ -156,15 +159,6 @@ export default function Navbar() {
                   Our Concerns
                 </NavigationMenuLink>
               </NavigationMenuItem>
-
-              <NavigationMenuItem>
-                <NavigationMenuLink
-                  href="works"
-                  className="text-sm font-medium text-gray-800 hover:text-amber-600 dark:text-gray-100 dark:hover:text-amber-400 transition-colors px-2 py-2 focus-visible:ring-2 focus-visible:ring-amber-500/60 rounded-md"
-                >
-                  Our Works
-                </NavigationMenuLink>
-              </NavigationMenuItem>
             </NavigationMenuList>
           </NavigationMenu>
 
@@ -172,8 +166,8 @@ export default function Navbar() {
             <AnimatedThemeToggler className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-gray-200 bg-white text-gray-800 hover:bg-gray-50 dark:border-neutral-800 dark:bg-neutral-900 dark:text-gray-100 dark:hover:bg-neutral-800 transition-colors cursor-pointer" />
             <a href="contact">
               <Button className="bg-amber-400 hover:bg-amber-300 text-black px-5 rounded-full text-sm font-semibold focus-visible:ring-2 focus-visible:ring-amber-500/60 cursor-pointer">
-              Contact Us
-            </Button>
+                Contact Us
+              </Button>
             </a>
           </div>
 
@@ -222,7 +216,7 @@ export default function Navbar() {
                 <button
                   onClick={toggleMenu}
                   aria-label="Close menu"
-                  className="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-neutral-800"
+                  className="p-2 rounded-full bg-gray-300 dark:bg-neutral-800"
                 >
                   <X className="h-5 w-5 text-gray-800 dark:text-gray-100" />
                 </button>
@@ -274,21 +268,13 @@ export default function Navbar() {
                   >
                     Our Concerns
                   </motion.a>
-                  <motion.a
-                    variants={linkVariants}
-                    href="works"
-                    onClick={toggleMenu}
-                    className="px-2 py-3 text-base font-semibold text-gray-800 hover:text-amber-600 dark:text-gray-100 dark:hover:text-amber-400 transition-colors"
-                  >
-                    Our Works
-                  </motion.a>
                 </div>
 
                 <motion.div variants={linkVariants} className="mt-6">
                   <a href="contact">
                     <Button className="w-full bg-amber-500 text-zinc-900 hover:bg-amber-400 px-6 rounded-lg text-sm font-semibold">
-                    Contact Us
-                  </Button>
+                      Contact Us
+                    </Button>
                   </a>
                 </motion.div>
               </div>

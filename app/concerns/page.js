@@ -20,7 +20,7 @@ import {
   Users,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
-
+import Image from "next/image";
 const page = () => {
   const year = new Date().getFullYear();
 
@@ -103,10 +103,12 @@ const page = () => {
           >
             <motion.div variants={scaleIn} className="order-2 md:order-1">
               <div className="relative h-[400px] rounded-2xl overflow-hidden shadow-2xl dark:shadow-gray-900/50">
-                <img
-                  src="/api/placeholder/600/400"
+                <Image
+                  src="/Images/pc.webp"
                   alt="Computer and Laptop Store"
+                  fill
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                  priority
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent dark:from-black/80" />
                 <div className="absolute bottom-6 left-6 text-white">
@@ -243,10 +245,12 @@ const page = () => {
 
             <motion.div variants={scaleIn} className="order-2">
               <div className="relative h-[400px] rounded-2xl overflow-hidden shadow-2xl dark:shadow-gray-900/50">
-                <img
-                  src="/api/placeholder/600/400"
+                <Image
+                  src="/Images/cctv.webp"
                   alt="CCTV Security Camera Installation"
+                  fill
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                  priority
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent dark:from-black/80" />
                 <div className="absolute bottom-6 left-6 text-white">
@@ -269,10 +273,12 @@ const page = () => {
           >
             <motion.div variants={scaleIn} className="order-2 md:order-1">
               <div className="relative h-[400px] rounded-2xl overflow-hidden shadow-2xl dark:shadow-gray-900/50">
-                <img
-                  src="/api/placeholder/600/400"
+                <Image
+                  src="/Images/support.jpg"
                   alt="Professional IT Services"
+                  fill
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                  priority
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent dark:from-black/80" />
                 <div className="absolute bottom-6 left-6 text-white">
