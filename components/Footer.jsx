@@ -79,11 +79,10 @@ export default function Footer() {
             </div>
             <ul className="mt-3 space-y-2 text-sm">
               {[
-                ["Who We Are", "#who-we-are"],
-                ["Why Choose Us", "#why-choose-us"],
-                ["Services", "#services"],
-                ["Stats", "#stats"],
-                ["Contact", "#contact"],
+                ["About", "/about"],
+                ["Services", "/services"],
+                ["Our Concerns", "/concerns"],
+                ["Contact", "/contact"],
               ].map(([name, href]) => (
                 <li key={name}>
                   <a
@@ -154,19 +153,19 @@ export default function Footer() {
               <div className="flex items-center gap-2 text-gray-700 dark:text-gray-300">
                 <Mail className="h-4 w-4" />
                 <a
-                  href="mailto:info@goldmineinfotech.com"
+                  href="mailto:admin@goldmineinfotech.com"
                   className="hover:text-amber-600 dark:hover:text-amber-400 transition-colors"
                 >
-                  info@goldmineinfotech.com
+                  admin@goldmineinfotech.com
                 </a>
               </div>
               <div className="flex items-center gap-2 text-gray-700 dark:text-gray-300">
                 <Phone className="h-4 w-4" />
                 <a
-                  href="tel:+910000000000"
+                  href="tel:+91 95000 36310"
                   className="hover:text-amber-600 dark:hover:text-amber-400 transition-colors"
                 >
-                  +91 00000 00000
+                  +91 95000 36310
                 </a>
               </div>
               <div className="flex items-start gap-2 text-gray-700 dark:text-gray-300">
@@ -198,7 +197,7 @@ export default function Footer() {
               Terms
             </a>
             <a
-              href="/sitemap"
+              href="https://maps.app.goo.gl/f9Kbyi7K3WrhVLsGA"
               className="text-gray-500 hover:text-amber-600 dark:text-gray-400 dark:hover:text-amber-400 transition-colors"
             >
               Sitemap

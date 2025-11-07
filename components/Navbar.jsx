@@ -209,9 +209,9 @@ export default function Navbar() {
               initial="hidden"
               animate="visible"
               exit="exit"
-              className="fixed top-0 right-0 z-50 h-[100dvh] w-72 max-w-[85vw] bg-white dark:bg-neutral-950 shadow-2xl border-l border-gray-200 dark:border-neutral-800 md:hidden"
+              className="fixed top-0 right-0 z-50 h-[100dvh] w-72 max-w-[85vw] bg-white dark:bg-neutral-950 shadow-2xl border-l border-gray-300 dark:border-neutral-800 md:hidden"
             >
-              <div className="flex items-center justify-between px-5 h-16 border-b border-gray-200 dark:border-neutral-800">
+              <div className="flex items-center justify-between px-5 h-16 border-b border-gray-400 dark:border-neutral-800">
                 <span className="text-sm font-semibold text-gray-900 dark:text-white"></span>
                 <button
                   onClick={toggleMenu}
@@ -223,7 +223,10 @@ export default function Navbar() {
               </div>
 
               <div className="px-4 pt-3 pb-10 overflow-y-auto">
-                <div className="flex flex-col divide-y divide-gray-100 dark:divide-neutral-800 rounded-lg overflow-hidden border border-gray-100 dark:border-neutral-800">
+                <div
+                  className="flex flex-col divide-y divide-gray-400 dark:divide-neutral-800 rounded-lg overflow-hidden border
+                 border-gray-400 dark:border-neutral-800"
+                >
                   {navLinks.map((link) => (
                     <motion.a
                       key={link.name}

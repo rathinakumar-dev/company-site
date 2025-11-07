@@ -21,10 +21,9 @@ import {
   MapPin,
 } from "lucide-react";
 import { motion } from "framer-motion";
+import BottomFooter from "@/components/BottomFooter";
 
 const Page = () => {
-  const year = new Date().getFullYear();
-
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log("Form submitted");
@@ -340,35 +339,7 @@ const Page = () => {
         />
       </motion.div>
 
-      <footer className="border-t border-zinc-300 dark:border-zinc-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-            <p className="text-xs text-zinc-600 dark:text-zinc-400">
-              © {year} Goldmine Infotech Pvt Ltd. All rights reserved.
-            </p>
-            <div className="flex items-center gap-6 text-xs">
-              <a
-                href="/privacy"
-                className="text-zinc-600 hover:text-amber-600 dark:text-zinc-400 dark:hover:text-amber-400 transition-colors"
-              >
-                Privacy
-              </a>
-              <a
-                href="/terms"
-                className="text-zinc-600 hover:text-amber-600 dark:text-zinc-400 dark:hover:text-amber-400 transition-colors"
-              >
-                Terms
-              </a>
-              <a
-                href="/sitemap"
-                className="text-zinc-600 hover:text-amber-600 dark:text-zinc-400 dark:hover:text-amber-400 transition-colors"
-              >
-                Sitemap
-              </a>
-            </div>
-          </div>
-        </div>
-      </footer>
+      <BottomFooter />
     </div>
   );
 };
