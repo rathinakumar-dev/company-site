@@ -131,7 +131,7 @@ export default function Navbar() {
                   aria-controls="radix-_R_2clrlb_-content-radix-_R_4qclrlb_"
                   className="text-sm font-medium text-gray-800 dark:text-gray-100 dark:hover:text-amber-400 transition-colors bg-transparent hover:bg-transparent data-[state=open]:bg-transparent focus-visible:ring-2 focus-visible:ring-amber-500/60 rounded-md"
                 >
-                  Services  
+                  Services
                 </NavigationMenuTrigger>
                 <NavigationMenuContent className="rounded-xl border border-gray-200 dark:border-neutral-800 bg-white dark:bg-neutral-900">
                   <ul className="grid w-[420px] gap-2 p-4 md:w-[520px] md:grid-cols-2  lg:w-[640px]">
@@ -209,21 +209,21 @@ export default function Navbar() {
               initial="hidden"
               animate="visible"
               exit="exit"
-              className="fixed top-0 right-0 z-50 h-[100dvh] w-72 max-w-[85vw] bg-white dark:bg-neutral-950 shadow-2xl border-l border-gray-400 dark:border-neutral-800 md:hidden"
+              className="fixed top-0 right-0 z-50 h-[100dvh] w-72 max-w-[85vw] bg-white dark:bg-neutral-950 shadow-2xl border-l border-gray-200 dark:border-neutral-800 md:hidden"
             >
-              <div className="flex items-center justify-between px-5 h-16 border-b border-gray-400 dark:border-neutral-800">
+              <div className="flex items-center justify-between px-5 h-16 border-b border-gray-200 dark:border-neutral-800">
                 <span className="text-sm font-semibold text-gray-900 dark:text-white"></span>
                 <button
                   onClick={toggleMenu}
                   aria-label="Close menu"
-                  className="p-2 rounded-full bg-gray-200 dark:bg-neutral-800"
+                  className="p-2 rounded-full bg-gray-300 dark:bg-neutral-800"
                 >
                   <X className="h-5 w-5 text-gray-800 dark:text-gray-100" />
                 </button>
               </div>
 
               <div className="px-4 pt-3 pb-10 overflow-y-auto">
-                <div className="flex flex-col divide-y divide-gray-100 dark:divide-neutral-800 rounded-lg overflow-hidden border border-gray-400 dark:border-neutral-800">
+                <div className="flex flex-col divide-y divide-gray-100 dark:divide-neutral-800 rounded-lg overflow-hidden border border-gray-100 dark:border-neutral-800">
                   {navLinks.map((link) => (
                     <motion.a
                       key={link.name}
@@ -239,7 +239,7 @@ export default function Navbar() {
                   <motion.div variants={linkVariants} className="px-2">
                     <details className="group">
                       <summary className="py-3 text-base font-semibold text-gray-800 hover:text-amber-600 dark:text-gray-100 dark:hover:text-amber-400 transition-colors cursor-pointer flex items-center justify-between">
-                        Services  
+                        Services
                         <ChevronDown className="w-4 h-4 transition-transform group-open:rotate-180" />
                       </summary>
                       <div className="pb-2">
