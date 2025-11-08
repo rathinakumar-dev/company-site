@@ -14,7 +14,7 @@ const NavPath = ({ path, className = "" }) => {
       className={`w-full h-66 bg-zinc-100/50 dark:bg-zinc-800 flex justify-center items-center shadow-sm relative -top-16 ${className}`}
     >
       <BreadcrumbList
-        className="px-4 flex items-center gap-2 whitespace-nowrap"
+        className="px-4 flex items-center gap-2 whitespace-nowrap mt-4"
         style={{ minHeight: 48 }} 
       >
         {path.map((item, idx) => (
