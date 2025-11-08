@@ -34,7 +34,7 @@ export default function Footer() {
     <footer
       ref={rootRef}
       role="contentinfo"
-      className="border-t border-gray-200 dark:border-neutral-800 dark:bg-neutral-950"
+      className="border-t border-gray-200 dark:border-neutral-800 bg-zinc-300 dark:bg-black "
     >
       <div className="max-w-7xl mx-auto px-6 md:px-10 py-8 md:pt-12">
         <motion.div

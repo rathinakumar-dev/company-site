@@ -1,15 +1,8 @@
 "use client";
 
 import Navbar from "@/components/Navbar";
-import {
-  Breadcrumb,
-  BreadcrumbItem,
-  BreadcrumbLink,
-  BreadcrumbList,
-  BreadcrumbPage,
-  BreadcrumbSeparator,
-} from "@/components/ui/breadcrumb";
-import BottomFooter from "@/components/BottomFooter";
+import NavPath from "@/components/NavPath";
+import BottomFooter from "@/components/FooterBottom";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import {
@@ -104,27 +97,15 @@ const Page = () => {
     }
   };
 
+  const termsPath = [
+    { label: "Home", href: "/" },
+    { label: "Terms & Conditions" },
+  ];
+
   return (
-    <div className="bg-zinc-50 dark:bg-black font-inter min-h-screen">
+    <div className="bg-zinc-300 dark:bg-black font-inter min-h-screen">
       <Navbar className="absolute" />
-      <Breadcrumb className="w-full h-66 bg-white dark:bg-zinc-900 border-b border-zinc-200 dark:border-zinc-800 flex justify-center items-center shadow-sm relative -top-16">
-        <BreadcrumbList className="px-4 mt-8">
-          <BreadcrumbItem>
-            <BreadcrumbLink
-              href="/"
-              className="text-sm md:text-base text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors"
-            >
-              Home
-            </BreadcrumbLink>
-          </BreadcrumbItem>
-          <BreadcrumbSeparator />
-          <BreadcrumbItem>
-            <BreadcrumbPage className="text-sm md:text-base text-zinc-900 dark:text-white font-medium">
-              Terms & Conditions
-            </BreadcrumbPage>
-          </BreadcrumbItem>
-        </BreadcrumbList>
-      </Breadcrumb>
+      <NavPath path={termsPath} />
 
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">

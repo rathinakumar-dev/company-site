@@ -1,14 +1,7 @@
 "use client";
 
-import Navbar from "@/components/Navbar";
-import {
-  Breadcrumb,
-  BreadcrumbItem,
-  BreadcrumbLink,
-  BreadcrumbList,
-  BreadcrumbPage,
-  BreadcrumbSeparator,
-} from "@/components/ui/breadcrumb";
+import Navbar from "@/components/Navbar"; 
+import NavPath from "@/components/NavPath";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
@@ -21,7 +14,7 @@ import {
   MapPin,
 } from "lucide-react";
 import { motion } from "framer-motion";
-import BottomFooter from "@/components/BottomFooter";
+import BottomFooter from "@/components/FooterBottom";
 
 const Page = () => {
   const handleSubmit = (e) => {
@@ -54,27 +47,15 @@ const Page = () => {
     },
   };
 
+  const contactPath = [
+  { label: "Home", href: "/" },
+  { label: "Contact" }
+  ]
+
   return (
     <div className="bg-zinc-300 dark:bg-black font-inter min-h-screen">
       <Navbar className="absolute" />
-      <Breadcrumb className="w-full h-66 bg-zinc-100/50  dark:bg-zinc-800 object-contain flex justify-center items-center shadow-sm relative -top-16">
-        <BreadcrumbList className="px-4 mt-8">
-          <BreadcrumbItem>
-            <BreadcrumbLink
-              href="/"
-              className="text-sm md:text-base text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors"
-            >
-              Home
-            </BreadcrumbLink>
-          </BreadcrumbItem>
-          <BreadcrumbSeparator />
-          <BreadcrumbItem>
-            <BreadcrumbPage className="text-sm md:text-base text-zinc-900 dark:text-white font-medium">
-              Contact Us
-            </BreadcrumbPage>
-          </BreadcrumbItem>
-        </BreadcrumbList>
-      </Breadcrumb>
+      <NavPath path={contactPath} />
 
       <main className="max-w-7xl mx-auto px-4 pb-10 md:px-14 md:pt-0 md:pb-16">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">

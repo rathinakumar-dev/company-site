@@ -1,25 +1,11 @@
 "use client";
 
 import Navbar from "@/components/Navbar";
-import { motion } from "framer-motion";
-import {
-  Breadcrumb,
-  BreadcrumbItem,
-  BreadcrumbLink,
-  BreadcrumbList,
-  BreadcrumbPage,
-  BreadcrumbSeparator,
-} from "@/components/ui/breadcrumb";
-import {
-  Target,
-  Eye,
-  Heart,
-  Lightbulb,
-  Users2,
-  Trophy,
-  CheckCircle2,
-} from "lucide-react";
-import BottomFooter from "@/components/BottomFooter";
+import BottomFooter from "@/components/FooterBottom";
+import { motion } from "framer-motion"; 
+import { Target, Eye, Trophy, CheckCircle2 } from "lucide-react";
+import { companyValues, timeline, achievements } from "@/data/Data";
+import NavPath from "@/components/NavPath";
 
 const page = () => {
   const fadeInUp = {
@@ -35,91 +21,14 @@ const page = () => {
       },
     },
   };
-
-  const companyValues = [
-    {
-      icon: <Heart className="w-12 h-12 mx-auto" />,
-      title: "Client-Centric Approach",
-      description:
-        "We study your business deeply to craft solutions that truly align with your goals and drive real results",
-    },
-    {
-      icon: <Lightbulb className="w-12 h-12 mx-auto" />,
-      title: "Innovation First",
-      description:
-        "Pioneering creative solutions that keep your business ahead in the digital landscape",
-    },
-    {
-      icon: <CheckCircle2 className="w-12 h-12 mx-auto" />,
-      title: "Quality Commitment",
-      description:
-        "Every project receives our full dedication to excellence and attention to detail",
-    },
-    {
-      icon: <Users2 className="w-12 h-12 mx-auto" />,
-      title: "Partnership Mindset",
-      description:
-        "We don't just deliver projects—we build lasting relationships as your growth partners",
-    },
-  ];
-
-  const timeline = [
-    {
-      year: "2000",
-      title: "The Beginning",
-      description:
-        "Founded in March with a vision to democratize web presence for Indian businesses",
-    },
-    {
-      year: "2005-2010",
-      title: "Rapid Growth",
-      description:
-        "Expanded service offerings and built a strong client base across industries",
-    },
-    {
-      year: "2015-2020",
-      title: "Innovation Era",
-      description:
-        "Introduced cutting-edge solutions including eNACH integration and advanced web applications",
-    },
-    {
-      year: "2025",
-      title: "Industry Leader",
-      description:
-        "Serving 2,250+ clients with 1,500+ active websites and 750+ happy employees",
-    },
-  ];
-
-  const achievements = [
-    "25+ Years of Excellence in IT Solutions",
-    "2,250+ Satisfied Clients Across India",
-    "1,500+ Active Websites Managed",
-    "750+ Happy Team Members",
-    "100% Client Satisfaction Track Record",
-    "Specialized eNACH Integration Expertise",
-  ];
-
+  const aboutPath = [
+  { label: "Home", href: "/" },
+  { label: "About" }
+];
   return (
     <div className="bg-zinc-300 dark:bg-black font-inter min-h-screen">
       <Navbar className="absolute" />
-      <Breadcrumb className="w-full h-66 bg-zinc-100/50  dark:bg-zinc-800 object-contain flex justify-center items-center shadow-sm relative -top-16">
-        <BreadcrumbList className="px-4 mt-8">
-          <BreadcrumbItem>
-            <BreadcrumbLink
-              href="/"
-              className="text-sm md:text-base text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-white transition-colors"
-            >
-              Home
-            </BreadcrumbLink>
-          </BreadcrumbItem>
-          <BreadcrumbSeparator />
-          <BreadcrumbItem>
-            <BreadcrumbPage className="text-sm md:text-base text-zinc-900 dark:text-white font-medium">
-              About
-            </BreadcrumbPage>
-          </BreadcrumbItem>
-        </BreadcrumbList>
-      </Breadcrumb>
+       <NavPath path={aboutPath} />
       <main>
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <motion.section
