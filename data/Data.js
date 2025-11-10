@@ -239,10 +239,10 @@ export const achievements = [
 ];
 
 export const concerns = [
-  { number: "11+", label: "Years Experience", icon: Award },
-  { number: "2000+", label: "Happy Clients", icon: Users },
-  { number: "5", label: "Major Brands", icon: Monitor },
-  { number: "100%", label: "Satisfaction", icon: TrendingUp },
+  { number: 11, label: "Years Experience", icon: Award },
+  { number: 2000, label: "Happy Clients", icon: Users },
+  { number: 5, label: "Major Brands", icon: Monitor },
+  { number: 100, label: "Satisfaction", icon: TrendingUp, isPercentage: true },
 ];
 
 export const center = [

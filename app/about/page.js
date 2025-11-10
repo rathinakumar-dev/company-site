@@ -1,11 +1,11 @@
 "use client";
 
 import Navbar from "@/components/Navbar";
+import NavPath from "@/components/NavPath";
 import BottomFooter from "@/components/FooterBottom";
-import { motion } from "framer-motion"; 
+import { motion } from "framer-motion";
 import { Target, Eye, Trophy, CheckCircle2 } from "lucide-react";
 import { companyValues, timeline, achievements } from "@/data/Data";
-import NavPath from "@/components/NavPath";
 
 const page = () => {
   const fadeInUp = {
@@ -21,14 +21,12 @@ const page = () => {
       },
     },
   };
-  const aboutPath = [
-  { label: "Home", href: "/" },
-  { label: "About" }
-];
+  const aboutPath = [{ label: "Home", href: "/" }, { label: "About" }];
+
   return (
     <div className="bg-zinc-300 dark:bg-black font-inter min-h-screen">
       <Navbar className="absolute" />
-       <NavPath path={aboutPath} />
+      <NavPath path={aboutPath} />
       <main>
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <motion.section

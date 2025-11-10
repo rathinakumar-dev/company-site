@@ -4,11 +4,12 @@ import { useRef } from "react";
 import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import NavPath from "@/components/NavPath";
-import BottomFooter from "@/components/FooterBottom"; 
+import BottomFooter from "@/components/FooterBottom";
 import { motion, useInView } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { CheckCircle2, Award, Target } from "lucide-react";
 import { concerns, center, solution, concernWhyChoose } from "@/data/Data";
+import CountUp from "@/components/CountUp";
 
 const Page = () => {
   // Refs for animation triggers
@@ -103,6 +104,7 @@ const Page = () => {
         >
           {concerns.map((stat, index) => {
             const Icon = stat.icon;
+
             return (
               <motion.div
                 key={index}
@@ -110,12 +112,30 @@ const Page = () => {
                 whileHover={{ y: -5 }}
                 className="bg-white dark:bg-zinc-900 rounded-2xl p-6 text-center shadow-md border border-zinc-200 dark:border-zinc-800 transition-all hover:shadow-lg"
               >
+                {/* Icon */}
                 <div className="inline-flex items-center justify-center w-12 h-12 bg-zinc-900 dark:bg-zinc-800 rounded-xl mb-4">
                   <Icon className="w-6 h-6 text-white" />
                 </div>
-                <div className="text-4xl font-bold text-zinc-900 dark:text-white mb-2">
-                  {stat.number}
+
+                {/* Number / Percentage */}
+                <div className="text-4xl font-bold text-zinc-900 dark:text-white mb-2 flex justify-center items-baseline gap-1">
+                  <CountUp
+                    from={0}
+                    to={stat.number}
+                    separator=","
+                    duration={1.3}
+                    className="count-up-text"
+                  />
+                  {stat.isPercentage ? (
+                    <span className="text-3xl font-semibold text-primary">
+                      %
+                    </span>
+                  ) : (
+                    <span className="text-4xl text-primary">+</span>
+                  )}
                 </div>
+
+                {/* Label */}
                 <div className="text-sm text-zinc-600 dark:text-zinc-400 font-medium">
                   {stat.label}
                 </div>

@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useMemo } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Menu, X, ChevronDown } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -64,24 +65,28 @@ export default function Navbar() {
   const navLinks = useMemo(
     () => [
       { name: "Home", href: "/" },
-      { name: "About", href: "about" },
+      { name: "About", href: "/about" },
     ],
     []
   );
+
   const servicesSubmenu = useMemo(
     () => [
-      "Domain Registration",
-      "Web Hosting & Designing",
-      "SSL Certificates",
-      "VPS Hosting",
-      "E-Commerce WEbsite",
-      "E-Mail Solutions",
-      "Software Development",
-      "Android App Development",
-      "Panoromic 360° View",
-      "Bulk SMS Service",
-      "Gsuite email Creation",
-      "Payment Gatewap Intergation",
+      { name: "Domain Registration", href: "domain-registration" },
+      { name: "Web Hosting & Designing", href: "web-hosting-designing" },
+      { name: "SSL Certificates", href: "ssl-certificates" },
+      { name: "VPS Hosting", href: "vps-hosting" },
+      { name: "E-Commerce Website", href: "ecommerce-website" },
+      { name: "E-Mail Solutions", href: "email-solutions" },
+      { name: "Software Development", href: "software-development" },
+      { name: "Android App Development", href: "android-app-development" },
+      { name: "Panoramic 360° View", href: "panoramic-360-view" },
+      { name: "Bulk SMS Service", href: "bulk-sms-service" },
+      { name: "Gsuite Email Creation", href: "gsuite-email-creation" },
+      {
+        name: "Payment Gateway Integration",
+        href: "payment-gateway-integration",
+      },
     ],
     []
   );
@@ -100,7 +105,7 @@ export default function Navbar() {
             headerSurface,
           ].join(" ")}
         >
-          <a href="/" className="flex items-center min-w-0">
+          <Link href="/" className="flex items-center min-w-0">
             <Image
               src="/Images/logo.png"
               alt="Goldmine Infotech"
@@ -110,7 +115,7 @@ export default function Navbar() {
               className="dark:invert"
               style={{ height: 44, width: "auto" }}
             />
-          </a>
+          </Link>
 
           <NavigationMenu className="hidden md:flex">
             <NavigationMenuList className="flex items-center gap-2">
@@ -126,24 +131,21 @@ export default function Navbar() {
               ))}
 
               <NavigationMenuItem>
-                <NavigationMenuTrigger
-                  id="radix-_R_2clrlb_-trigger-radix-_R_4qclrlb_"
-                  aria-controls="radix-_R_2clrlb_-content-radix-_R_4qclrlb_"
-                  className="text-sm font-medium text-gray-800 dark:text-gray-100 dark:hover:text-amber-400 transition-colors bg-transparent hover:bg-transparent data-[state=open]:bg-transparent focus-visible:ring-2 focus-visible:ring-amber-500/60 rounded-md"
-                >
+                <NavigationMenuTrigger className="text-sm font-medium text-gray-800 dark:text-gray-100 dark:hover:text-amber-400 transition-colors bg-transparent hover:bg-transparent data-[state=open]:bg-transparent focus-visible:ring-2 focus-visible:ring-amber-500/60 rounded-md">
                   Services
                 </NavigationMenuTrigger>
+
                 <NavigationMenuContent className="rounded-xl border border-gray-200 dark:border-neutral-800 bg-white dark:bg-neutral-900">
-                  <ul className="grid w-[420px] gap-2 p-4 md:w-[520px] md:grid-cols-2  lg:w-[640px]">
-                    {servicesSubmenu.map((service) => (
-                      <li key={service}>
+                  <ul className="grid w-[420px] gap-2 p-4 md:w-[520px] md:grid-cols-2 lg:w-[640px]">
+                    {servicesSubmenu.map(({ name, href }) => (
+                      <li key={href}>
                         <NavigationMenuLink asChild>
-                          <a
-                            href="services"
+                          <Link
+                            href={`/services/${href}`}
                             className="block rounded-md px-3 py-2 text-sm text-gray-700 hover:bg-amber-50 hover:text-amber-700 focus:bg-amber-50 focus:text-amber-700 outline-none dark:text-gray-200 dark:hover:bg-amber-500/10 dark:hover:text-amber-300 transition-colors"
                           >
-                            {service}
-                          </a>
+                            {name}
+                          </Link>
                         </NavigationMenuLink>
                       </li>
                     ))}
@@ -153,7 +155,7 @@ export default function Navbar() {
 
               <NavigationMenuItem>
                 <NavigationMenuLink
-                  href="concerns"
+                  href="/concerns"
                   className="text-sm font-medium text-gray-800 hover:text-amber-600 dark:text-gray-100 dark:hover:text-amber-400 transition-colors px-2 py-2 focus-visible:ring-2 focus-visible:ring-amber-500/60 rounded-md"
                 >
                   Our Concerns
@@ -164,11 +166,11 @@ export default function Navbar() {
 
           <div className="hidden md:flex items-center gap-3">
             <AnimatedThemeToggler className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-gray-200 bg-white text-gray-800 hover:bg-gray-50 dark:border-neutral-800 dark:bg-neutral-900 dark:text-gray-100 dark:hover:bg-neutral-800 transition-colors cursor-pointer" />
-            <a href="contact">
+            <Link href="/contact">
               <Button className="bg-amber-400 hover:bg-amber-300 text-black px-5 rounded-full text-sm font-semibold focus-visible:ring-2 focus-visible:ring-amber-500/60 cursor-pointer">
                 Contact Us
               </Button>
-            </a>
+            </Link>
           </div>
 
           <div className="md:hidden flex items-center gap-3">
@@ -228,15 +230,19 @@ export default function Navbar() {
                  border-gray-400 dark:border-neutral-800"
                 >
                   {navLinks.map((link) => (
-                    <motion.a
+                    <motion.div
                       key={link.name}
                       variants={linkVariants}
-                      href={link.href}
-                      onClick={toggleMenu}
-                      className="px-2 py-3 text-base font-semibold text-gray-800 hover:text-amber-600 dark:text-gray-100 dark:hover:text-amber-400 transition-colors"
+                      className="px-2"
                     >
-                      {link.name}
-                    </motion.a>
+                      <Link
+                        href={link.href}
+                        onClick={toggleMenu}
+                        className="block px-2 py-3 text-base font-semibold text-gray-800 hover:text-amber-600 dark:text-gray-100 dark:hover:text-amber-400 transition-colors"
+                      >
+                        {link.name}
+                      </Link>
+                    </motion.div>
                   ))}
 
                   <motion.div variants={linkVariants} className="px-2">
@@ -245,17 +251,18 @@ export default function Navbar() {
                         Services
                         <ChevronDown className="w-4 h-4 transition-transform group-open:rotate-180" />
                       </summary>
+
                       <div className="pb-2">
                         <ul className="flex flex-col gap-0.5">
-                          {servicesSubmenu.map((service) => (
-                            <li key={service}>
-                              <a
-                                href="services"
+                          {servicesSubmenu.map(({ name, href }) => (
+                            <li key={href}>
+                              <Link
+                                href={`/services/${href}`}
                                 onClick={toggleMenu}
                                 className="block rounded-md px-2 py-2 text-sm font-medium text-gray-700 hover:bg-amber-50 hover:text-amber-700 dark:text-gray-300 dark:hover:bg-amber-500/10 dark:hover:text-amber-300 transition-colors"
                               >
-                                {service}
-                              </a>
+                                {name}
+                              </Link>
                             </li>
                           ))}
                         </ul>
@@ -263,22 +270,23 @@ export default function Navbar() {
                     </details>
                   </motion.div>
 
-                  <motion.a
-                    variants={linkVariants}
-                    href="concerns"
-                    onClick={toggleMenu}
-                    className="px-2 py-3 text-base font-semibold text-gray-800 hover:text-amber-600 dark:text-gray-100 dark:hover:text-amber-400 transition-colors"
-                  >
-                    Our Concerns
-                  </motion.a>
+                  <motion.div variants={linkVariants} className="px-2">
+                    <Link
+                      href="/concerns"
+                      onClick={toggleMenu}
+                      className="block px-2 py-3 text-base font-semibold text-gray-800 hover:text-amber-600 dark:text-gray-100 dark:hover:text-amber-400 transition-colors"
+                    >
+                      Our Concerns
+                    </Link>
+                  </motion.div>
                 </div>
 
                 <motion.div variants={linkVariants} className="mt-6">
-                  <a href="contact">
+                  <Link href="/contact" onClick={toggleMenu}>
                     <Button className="w-full bg-amber-500 text-zinc-900 hover:bg-amber-400 px-6 rounded-lg text-sm font-semibold">
                       Contact Us
                     </Button>
-                  </a>
+                  </Link>
                 </motion.div>
               </div>
             </motion.nav>
