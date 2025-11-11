@@ -74,7 +74,7 @@ export default function Page() {
       <NavPath
         path={[{ label: "Home", href: "/" }, { label: "Domain Registration" }]}
       />
-      <main className="max-w-5xl mx-auto py-16 px-4 sm:px-6 lg:px-8 rounded-2xl">
+      <main className="max-w-5xl mx-auto pb-16 px-4 sm:px-6 lg:px-8 rounded-2xl">
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}

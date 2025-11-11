@@ -247,7 +247,7 @@ export default function Navbar() {
 
                   <motion.div variants={linkVariants} className="px-2">
                     <details className="group">
-                      <summary className="py-3 text-base font-semibold text-gray-800 hover:text-amber-600 dark:text-gray-100 dark:hover:text-amber-400 transition-colors cursor-pointer flex items-center justify-between">
+                      <summary className="py-3 px-2 text-base font-semibold text-gray-800 hover:text-amber-600 dark:text-gray-100 dark:hover:text-amber-400 transition-colors cursor-pointer flex items-center justify-between">
                         Services
                         <ChevronDown className="w-4 h-4 transition-transform group-open:rotate-180" />
                       </summary>
