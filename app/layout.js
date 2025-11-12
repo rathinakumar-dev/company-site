@@ -30,6 +30,7 @@ export default function RootLayout({ children }) {
         >
           {children}
         </ThemeProvider>
+        <script src="https://tweakcn.com/live-preview.min.js"></script>
       </body>
     </html>
   );

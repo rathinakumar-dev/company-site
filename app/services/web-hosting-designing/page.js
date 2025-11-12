@@ -6,164 +6,167 @@ import BottomFooter from "@/components/FooterBottom";
 import { motion } from "framer-motion";
 import {
   Globe,
-  Server,
   Laptop,
-  Building2,
-  ShieldCheck,
-  Users,
+  Building,
   Layers,
+  Star,
   Zap,
+  Square,
+  Film,
+  Server,
+  Grid2x2, 
+  Terminal,
 } from "lucide-react";
 
 export default function Page() {
   const blocks = [
     {
       size: "lg:col-span-2 lg:row-span-2",
-      icon: Globe,
-      title: "Transform Your Business Online",
-      desc:
-        "A well-designed website expands your reach and builds instant credibility. We turn offline businesses into thriving online brands.",
-    },
-    {
-      size: "lg:col-span-1",
-      icon: Laptop,
-      title: "Web Designing",
-      desc:
-        "We blend aesthetic appeal and user-friendliness for powerful business results.",
-    },
-    {
-      size: "lg:col-span-1",
-      icon: Building2,
-      title: "Commercial Sites",
-      desc:
-        "Modern, scalable, and technically advanced web apps, portals, CMS, e-commerce & more.",
-    },
-    {
-      size: "lg:col-span-1",
-      icon: Layers,
-      title: "Corporate Sites",
-      desc:
-        "Distinct digital identity and credibility for organizations in every sector.",
-      tags: ["IT", "Retail", "Outsourcing", "Travel", "Hotels", "HR", "Education", "Arts", "More"],
-    },
-    {
-      size: "lg:col-span-1",
-      icon: Users,
-      title: "General & Personal Sites",
-      desc:
-        "Impactful web identities for individuals, listings, and small businesses.",
-      tags: ["hellochennai.in", "tilesbazzar.com", "chennaiphotographers.com"],
+      color: "from-primary/15 to-white dark:from-primary/25",
+      icon: <Globe className="w-10 h-10 text-primary" />,
+      title: "Website Designing",
+      desc: "Websites now essential for transforming offline businesses online.\nA charming look and user-friendliness make for lasting success, whether travel, e-commerce, or any industry.",
+      tags: ["Business Online", "Modern Design", "User-Friendly"],
     },
     {
       size: "lg:col-span-2",
-      icon: Zap,
-      title: "Flash & Multimedia",
-      desc:
-        "Bring your brand to life with interactive designs, intros, banners, and multimedia presentations.",
-      tags: ["Flash websites", "Animated Banners", "Multimedia Presentations"],
+      color: "from-slate-200 to-white dark:from-zinc-900",
+      icon: <Laptop className="w-8 h-8 text-primary" />,
+      title: "Commercial Web Designing",
+      desc: "Simple, clean, dynamic layouts made for programming, up-to-date design and technical scalability.\nIncludes: Portal Sites, Networking, Web Apps, CMS, E-Commerce, Cart Integration.",
+      tags: ["CMS", "E-Commerce", "Portal"],
     },
     {
       size: "lg:col-span-1",
-      icon: Server,
+      color: "from-slate-100 to-slate-300 dark:from-zinc-800",
+      icon: <Building className="w-8 h-8 text-primary" />,
+      title: "Corporate Web Designing",
+      desc: "Modern solutions to establish authentic, professional identity for all industries. Serving IT, Retail, Education, Travel, Hotels, HR, etc.",
+      tags: ["Professional", "Corporate", "Industry"],
+    },
+    {
+      size: "lg:col-span-1",
+      color: "from-primary/10 to-white dark:from-primary/20",
+      icon: <Layers className="w-8 h-8 text-primary" />,
+      title: "General Web Designing",
+      desc: "Personal, single page, and local portal presence: hellochennai.in, tilesbazzar.com, chennaiphotographers.com, etc.",
+      tags: ["Local Portals", "Personal", "SMB"],
+    },
+    {
+      size: "lg:col-span-1",
+      color: "from-slate-200 to-white dark:from-zinc-900",
+      icon: <Zap className="w-8 h-8 text-primary" />,
+      title: "Flash Designing",
+      desc: "Add creativity, innovation, and impressive presentations with Flash designs—make your site lively and memorable.",
+      tags: ["Flash Animation", "Interactive"],
+    },
+    {
+      size: "lg:col-span-1",
+      color: "from-slate-100 to-slate-300 dark:from-zinc-900",
+      icon: <Square className="w-8 h-8 text-primary" />,
+      title: "Animated Banners",
+      desc: "Creative, exclusive designs for brand image—add new dimensions and energy to your site and business.",
+      tags: ["Animated Banners", "Branding"],
+    },
+    {
+      size: "lg:col-span-1",
+      color: "from-primary/20 to-slate-50 dark:from-primary/30",
+      icon: <Film className="w-8 h-8 text-primary" />,
+      title: "Multimedia Presentations",
+      desc: "Powerpoint, Flash, and Director presentations to communicate and impress visitors.",
+      tags: ["Powerpoint", "Presentations", "Flash"],
+    },
+    {
+      size: "lg:col-span-1",
+      color: "from-slate-200 to-white dark:from-zinc-800",
+      icon: <Star className="w-8 h-8 text-primary" />,
+      title: "Flash Websites / Flash Intros",
+      desc: "Flash-driven sites are lively, interactive, and memorable—perfect for first impressions and modern style.",
+      tags: ["Flash Websites", "Flash Intros"],
+    },
+    {
+      size: "lg:col-span-2",
+      color: "from-primary/10 to-slate-200 dark:from-primary/20",
+      icon: <Server className="w-8 h-8 text-primary" />,
       title: "Web Hosting",
-      desc:
-        "Secure, high-speed hosting with 99.9% uptime—your site is always on.",
-      tags: ["Windows Hosting", "Linux Hosting"],
+      desc: "99.9% uptime, fast stable servers in both Windows & Linux. Plans include:\n• Free DNS Management\n• Email with advanced spam/virus protection\n• Secure FTP",
+      tags: ["Reliable Hosting", "Windows", "Linux"],
     },
     {
       size: "lg:col-span-1",
-      icon: ShieldCheck,
-      title: "Why Goldmine?",
-      desc:
-        "Creative design team, reliable infrastructure, affordable custom solutions, and 24x7 support.",
-      tags: ["Professional", "Affordable", "Custom", "Support"],
+      color: "from-white to-slate-100 dark:from-zinc-900",
+      icon: <Grid2x2 className="w-8 h-8 text-primary" />,
+      title: "Windows Web Hosting",
+      desc: "Best if you need .NET, ASP, MSSQL, Access. Hosted on latest Intel Windows 2003 servers.\n• ODBC, JMail, CDONTS, Active Perl, CGI, WAP, FTP, POP Accounts, Free 'Catch-all' forwarding.",
+      tags: ["ASP.NET", "Windows", "MSSQL"],
+    },
+    {
+      size: "lg:col-span-1",
+      color: "from-slate-50 to-slate-200 dark:from-zinc-900",
+      icon: <Terminal className="w-8 h-8 text-primary" />,
+      title: "Linux Web Hosting",
+      desc: "Most common OS for hosting companies. Suitable for Linux features: PHP, Perl, MySQL, CGI.\nCheaper, reliable, and always updated.",
+      tags: ["PHP", "MySQL", "Linux"],
     },
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-slate-50 to-slate-100 dark:from-black dark:to-zinc-950 font-inter">
+    <div className="min-h-screen bg-gradient-to-b from-slate-300 to-slate-100 dark:from-black dark:to-zinc-900 font-inter">
       <Navbar className="relative z-20" />
-      <NavPath path={[{ label: "Home", href: "/" }, { label: "Website Designing & Web Hosting" }]} />
+      <NavPath
+        path={[
+          { label: "Home", href: "/" },
+          { label: "Website Designing & Hosting" },
+        ]}
+      />
 
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-10 pb-24">
-        {/* Page intro */}
-        <section className="mb-8 sm:mb-10">
-          <h1 className="text-3xl sm:text-4xl font-bold tracking-tight text-slate-900 dark:text-slate-100">
-            Website Designing & Web Hosting
-          </h1>
-          <p className="mt-3 max-w-3xl text-base leading-relaxed text-slate-600 dark:text-slate-300">
-            Design that looks great and reads clearly—on every device and in every theme. We’ve refined spacing, contrast, and layout
-            so your content stays readable and the UI feels balanced.
-          </p>
-        </section>
-
+      <main className="max-w-7xl mx-auto py-16 px-4 sm:px-8 lg:px-12 rounded-2xl">
         {/* Bento Grid */}
         <motion.div
           initial="hidden"
           whileInView="visible"
           variants={{
             hidden: { opacity: 0 },
-            visible: { opacity: 1, transition: { staggerChildren: 0.06 } },
+            visible: { opacity: 1, transition: { staggerChildren: 0.08 } },
           }}
           viewport={{ once: true, margin: "-100px" }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 auto-rows-[minmax(160px,auto)] gap-5 sm:gap-6 lg:gap-7"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 grid-rows-4 gap-6"
         >
-          {blocks.map((block, i) => {
-            const Icon = block.icon;
-            return (
-              <motion.div
-                key={i}
-                variants={{
-                  hidden: { opacity: 0, y: 16 },
-                  visible: { opacity: 1, y: 0, transition: { duration: 0.4 } },
-                }}
-                className={`group relative flex flex-col p-6 sm:p-7 rounded-2xl bg-white/80 dark:bg-zinc-900/70 backdrop-blur supports-[backdrop-filter]:bg-white/60 border border-slate-200/70 dark:border-zinc-800 shadow-sm hover:shadow-md transition duration-300 ${block.size}`}
-              >
-                {/* Icon */}
-                <div className="mb-4 inline-flex items-center justify-center rounded-xl bg-sky-50 text-sky-700 dark:bg-sky-900/30 dark:text-sky-300 ring-1 ring-sky-200/60 dark:ring-sky-800/50 w-12 h-12">
-                  <Icon className="w-6 h-6" aria-hidden="true" />
+          {blocks.map((block, idx) => (
+            <motion.div
+              key={idx}
+              variants={{
+                hidden: { opacity: 0, y: 20 },
+                visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+              }}
+              className={`flex flex-col items-start justify-between p-7 rounded-2xl shadow-md hover:shadow-lg transition-shadow duration-300
+                 bg-gradient-to-br ${block.color} ${block.size}`}
+            >
+              <span className="flex items-center justify-center rounded-full bg-primary/10 dark:bg-primary/20 shadow w-14 h-14 mb-4">
+                {block.icon}
+              </span>
+              <h3 className="font-bold text-lg mb-2 bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
+                {block.title}
+              </h3>
+              <p className="text-muted-foreground mb-3 text-sm whitespace-pre-line">
+                {block.desc}
+              </p>
+              {block.tags && (
+                <div className="flex flex-wrap gap-2 mt-auto">
+                  {block.tags.map((tag, tagIdx) => (
+                    <span
+                      key={tagIdx}
+                      className="bg-primary/10 text-primary text-xs py-1 px-2 rounded-lg"
+                    >
+                      {tag}
+                    </span>
+                  ))}
                 </div>
-
-                {/* Title */}
-                <h3 className="text-lg sm:text-xl font-semibold text-slate-900 dark:text-slate-100 leading-snug">
-                  {block.title}
-                </h3>
-
-                {/* Description */}
-                <p className="mt-2 text-sm sm:text-[15px] leading-relaxed text-slate-600 dark:text-slate-300">
-                  {block.desc}
-                </p>
-
-                {/* Tags */}
-                {block.tags && (
-                  <div className="mt-4 flex flex-wrap gap-2">
-                    {block.tags.map((tag, idx) => (
-                      <span
-                        key={idx}
-                        className="inline-flex items-center rounded-md px-2.5 py-1 text-xs font-medium text-slate-700 dark:text-slate-200 bg-slate-100 dark:bg-zinc-800 border border-slate-200 dark:border-zinc-700"
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-                )}
-
-                {/* Hover affordance */}
-                <div className="pointer-events-none absolute inset-0 rounded-2xl ring-0 group-hover:ring-2 ring-sky-300/40 dark:ring-sky-500/30 transition" />
-              </motion.div>
-            );
-          })}
+              )}
+            </motion.div>
+          ))}
         </motion.div>
-
-        {/* Callout */}
-        <div className="mt-10 rounded-2xl border border-slate-200 dark:border-zinc-800 bg-gradient-to-r from-sky-50 to-white dark:from-zinc-900 dark:to-zinc-900 p-6 sm:p-7 shadow-sm">
-          <p className="text-sm sm:text-base text-slate-700 dark:text-slate-200 leading-relaxed">
-            Tip: For best readability, we use higher contrast text colours, increased line-height, and generous padding. All components support
-            dark mode automatically.
-          </p>
-        </div>
       </main>
-
       <BottomFooter />
     </div>
   );

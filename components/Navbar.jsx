@@ -72,17 +72,17 @@ export default function Navbar() {
 
   const servicesSubmenu = useMemo(
     () => [
-      { name: "Domain Registration", href: "domain-registration" },
-      { name: "Web Hosting & Designing", href: "web-hosting-designing" },
-      { name: "SSL Certificates", href: "ssl-certificates" },
-      { name: "VPS Hosting", href: "vps-hosting" },
-      { name: "E-Commerce Website", href: "ecommerce-website" },
-      { name: "E-Mail Solutions", href: "email-solutions" },
-      { name: "Software Development", href: "software-development" },
-      { name: "Android App Development", href: "android-app-development" },
-      { name: "Panoramic 360° View", href: "panoramic-360-view" },
-      { name: "Bulk SMS Service", href: "bulk-sms-service" },
-      { name: "Gsuite Email Creation", href: "gsuite-email-creation" },
+      { name: "Domain Registration", href: "/services/domain-registration" },
+      { name: "Web Hosting & Designing", href: "/services/web-hosting-designing" },
+      { name: "SSL Certificates", href: "/services/ssl-certificates" },
+      { name: "VPS Hosting", href: "/services/vps-hosting" },
+      { name: "E-Commerce Website", href: "/services/ecommerce-website" },
+      { name: "E-Mail Solutions", href: "/services/email-solutions" },
+      { name: "Software Development", href: "/services/software-development" },
+      { name: "Android App Development", href: "/services/android-app-development" },
+      { name: "Panoramic 360° View", href: "/services/panoramic-360-view" },
+      { name: "Bulk SMS Service", href: "http://smsc.goldmineinfotech.net/",},
+      { name: "Gsuite Email Creation", href: "/services/gsuite-email-creation" },
       {
         name: "Payment Gateway Integration",
         href: "payment-gateway-integration",
@@ -131,7 +131,7 @@ export default function Navbar() {
               ))}
 
               <NavigationMenuItem>
-                <NavigationMenuTrigger className="text-sm font-medium text-gray-800 dark:text-gray-100 dark:hover:text-amber-400 transition-colors bg-transparent hover:bg-transparent data-[state=open]:bg-transparent focus-visible:ring-2 focus-visible:ring-amber-500/60 rounded-md">
+                <NavigationMenuTrigger className="text-sm font-medium text-gray-800 hover:text-amber-600 dark:text-gray-100 dark:hover:text-amber-400 transition-colors px-2 py-2 focus:outline-none focus-visible:ring-2  bg-transparent cursor-pointer focus-visible:ring-amber-500/60 rounded-md data-[state=open]:bg-transparent">
                   Services
                 </NavigationMenuTrigger>
 
@@ -141,7 +141,7 @@ export default function Navbar() {
                       <li key={href}>
                         <NavigationMenuLink asChild>
                           <Link
-                            href={`/services/${href}`}
+                            href={`${href}`}
                             className="block rounded-md px-3 py-2 text-sm text-gray-700 hover:bg-amber-50 hover:text-amber-700 focus:bg-amber-50 focus:text-amber-700 outline-none dark:text-gray-200 dark:hover:bg-amber-500/10 dark:hover:text-amber-300 transition-colors"
                           >
                             {name}

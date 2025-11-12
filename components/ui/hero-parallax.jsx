@@ -99,7 +99,7 @@ export const HeroParallax = ({ products }) => {
 export const Header = () => {
   return (
     <div className="max-w-7xl relative mx-auto py-10 px-4 w-full left-0 z-40 top-20 md:top-8">
-      <h1 className="text-2xl text-center md:text-7xl font-bold text-black dark:text-white mt-6 md:mt-0">
+      <h1 className="text-2xl text-center md:text-7xl font-bold text-[#0E3594] dark:text-white mt-6 md:mt-0">
         Build a Fast, Modern Website <br /> That Grows Your Business
       </h1>
       <p className="max-w-2xl text-base text-center mx-auto md:text-xl mt-8 dark:text-neutral-200">

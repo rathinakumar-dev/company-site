@@ -5,6 +5,7 @@ import Navbar from "@/components/Navbar";
 import LogoLoop from "@/components/LogoLoop";
 import Footer from "@/components/Footer";
 import { HeroParallax } from "@/components/ui/hero-parallax";
+import Hero from "@/components/Hero";
 import { Button } from "@/components/ui/button";
 import { useInView, motion } from "framer-motion";
 import {
@@ -43,7 +44,8 @@ export default function Home() {
       {/* Nav */}
       <Navbar />
       {/* Hero */}
-      <HeroParallax products={products} />
+      {/* <HeroParallax products={products} /> */}
+      <Hero />
       {/* whychooseus */}
       <section
         aria-labelledby="why-choose-us-title"
